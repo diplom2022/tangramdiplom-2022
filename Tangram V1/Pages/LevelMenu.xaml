@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tangram.Pages.LevelMenu">
+
+    <ContentPage.Resources>
+        <Style  x:Key="btnStyle" TargetType="Button">
+            <Setter Property="WidthRequest" Value="120" />
+            <Setter Property="HeightRequest" Value="120" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.9*"/>
+                <RowDefinition Height="0.1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="0.8*"/>
+
+            </Grid.ColumnDefinitions>
+            <Image Source="Background.png" Aspect="Fill"  Grid.ColumnSpan ="1"  Grid.RowSpan ="2"/>
+            <StackLayout Padding="20"  Grid.Row="0" Grid.Column="0">
+                <ScrollView>
+                    <FlexLayout x:Name="flexLayout"
+                        Wrap="Wrap"
+                        JustifyContent="SpaceAround" >
+
+                    </FlexLayout>
+                </ScrollView>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="End"  HeightRequest="50" Grid.Row ="1"  >
+                <ImageButton  
+                Clicked="HomeButton_Clicked"
+                Scale="1"
+                Source="Home.png"         
+                BackgroundColor="Transparent"
+                
+                />
+
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
